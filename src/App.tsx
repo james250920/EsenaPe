@@ -13,7 +13,7 @@ const AppContent: React.FC = () => {
           <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
             <span className="text-white font-bold text-2xl">ST</span>
           </div>
-          <p className="text-gray-600">Cargando StudyTutor...</p>
+          <p className="text-gray-600">Cargando EnseñaPe...</p>
         </div>
       </div>
     );
