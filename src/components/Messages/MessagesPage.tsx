@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Video, Phone, MoreVertical, Send } from 'lucide-react';
+import { Search, Video, Phone, MoreVertical, Send, MessageCircle } from 'lucide-react';
 import { Message, Match } from '../../types';
 
 export const MessagesPage: React.FC = () => {

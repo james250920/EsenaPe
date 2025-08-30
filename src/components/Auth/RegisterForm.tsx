@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Lock, User, GraduationCap, Eye, EyeOff } from 'lucide-react';
+import { Mail, Lock, GraduationCap, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { universities } from '../../data/universities';
 
@@ -65,7 +65,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
         major: formData.major,
         year: formData.year,
       });
-    } catch (err) {
+    } catch {
       setError('Error al registrarse. Intenta nuevamente.');
     }
   };
@@ -74,7 +74,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
     <div className="w-full max-w-md mx-auto">
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <span className="text-white font-bold text-2xl">ST</span>
+          <span className="text-white font-bold text-2xl">EP</span>
         </div>
         <h2 className="text-3xl font-bold text-gray-900">Crear cuenta</h2>
         <p className="text-gray-600 mt-2">Únete a la comunidad universitaria</p>

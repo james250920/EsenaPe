@@ -6,11 +6,7 @@ import { RefreshCw, Filter } from 'lucide-react';
 export const MatchingPage: React.FC = () => {
   const [currentUserIndex, setCurrentUserIndex] = useState(0);
   const [users, setUsers] = useState<User[]>([]);
-  const [filters, setFilters] = useState({
-    subject: '',
-    university: '',
-    priceRange: [0, 100],
-  });
+  // Filters state removed as it was unused
 
   // Mock users data
   useEffect(() => {

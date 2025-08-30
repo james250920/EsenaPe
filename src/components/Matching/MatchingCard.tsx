@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, MapPin, Clock, CheckCircle, X, Heart } from 'lucide-react';
+import { Star, MapPin, CheckCircle, X, Heart } from 'lucide-react';
 import { User } from '../../types';
 
 interface MatchingCardProps {

@@ -23,8 +23,8 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
     }
 
     try {
-      await login(email, password);
-    } catch (err) {
+      await login(email);
+    } catch {
       setError('Credenciales inválidas');
     }
   };
@@ -33,7 +33,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSwitchToRegister }) => {
     <div className="w-full max-w-md mx-auto">
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
-          <span className="text-white font-bold text-2xl">ST</span>
+          <span className="text-white font-bold text-2xl">EP</span>
         </div>
         <h2 className="text-3xl font-bold text-gray-900">Bienvenido de vuelta</h2>
         <p className="text-gray-600 mt-2">Inicia sesión en tu cuenta universitaria</p>

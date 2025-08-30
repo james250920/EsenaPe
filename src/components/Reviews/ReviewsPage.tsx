@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Filter, TrendingUp, TrendingDown } from 'lucide-react';
+import { Star, Filter, TrendingUp } from 'lucide-react';
 import { Review } from '../../types';
 
 export const ReviewsPage: React.FC = () => {

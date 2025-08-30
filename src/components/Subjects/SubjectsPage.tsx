@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, DollarSign, Clock, Users, Star, Edit, Trash2 } from 'lucide-react';
+import { Plus, Search, DollarSign, Clock, Users, Edit, Trash2, BookOpen } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { Subject } from '../../types';
 
