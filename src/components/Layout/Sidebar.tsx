@@ -36,7 +36,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen
         fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
-        <div className="h-full flex flex-col">
+        <div className="flex flex-col h-full">
+          <div className="flex items-center h-16 px-6 border-b border-gray-200">
+            <h2 className="text-lg font-semibold">Panel de Control</h2>
+          </div>
 
           {/* Navigation */}
           <nav className="flex-1 px-4 py-6 space-y-2">
