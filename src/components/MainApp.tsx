@@ -44,14 +44,14 @@ export const MainApp: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Header onMenuClick={() => setSidebarOpen(true)} />
       
-      <div className="flex">
+      <div className="flex relative">
         <Sidebar 
           activeTab={activeTab} 
           onTabChange={handleTabChange}
           isOpen={sidebarOpen}
         />
         
-        <main className="flex-1 lg:ml-0">
+        <main className="flex-1 lg:ml-0 relative z-0">
           <div className="p-4 lg:p-8 pb-20 lg:pb-8">
             {renderContent()}
           </div>
