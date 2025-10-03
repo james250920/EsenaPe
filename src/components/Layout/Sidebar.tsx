@@ -18,7 +18,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen
     { id: 'messages', name: 'Mensajes', icon: MessageCircle },
     { id: 'reviews', name: 'Reseñas', icon: Star },
     { id: 'profile', name: 'Perfil', icon: User },
+    { id: 'tutors', name: 'Localizar Tutores', icon: Users },
     { id: 'settings', name: 'Configuración', icon: Settings },
+    
   ];
 
   return (

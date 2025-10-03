@@ -8,6 +8,7 @@ import { SubjectsPage } from './Subjects/SubjectsPage';
 import { MessagesPage } from './Messages/MessagesPage';
 import { ProfilePage } from './Profile/ProfilePage';
 import { ReviewsPage } from './Reviews/ReviewsPage';
+import { LocalizarTutoresPage } from './LocalizarTutores.tsx/LocalizarTutoresPage';
 
 export const MainApp: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -32,6 +33,8 @@ export const MainApp: React.FC = () => {
         return <ProfilePage />;
       case 'reviews':
         return <ReviewsPage />;
+      case 'tutors':
+        return <LocalizarTutoresPage />;
       default:
         return <Dashboard />;
     }
