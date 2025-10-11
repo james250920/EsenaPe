@@ -23,9 +23,9 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             </button>
             <div className="flex-shrink-0 flex items-center ml-2 lg:ml-0">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">EP</span>
+                <span className="text-white font-bold text-sm">AP</span>
               </div>
-              <span className="ml-2 text-xl font-bold text-gray-900">EnseñamePe</span>
+              <span className="ml-2 text-xl font-bold text-gray-900">AprendePe</span>
             </div>
           </div>
 
