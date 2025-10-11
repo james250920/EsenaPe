@@ -9,6 +9,7 @@ import { MessagesPage } from './Messages/MessagesPage';
 import { ProfilePage } from './Profile/ProfilePage';
 import { ReviewsPage } from './Reviews/ReviewsPage';
 import { LocalizarTutoresPage } from './LocalizarTutores.tsx/LocalizarTutoresPage';
+import { NotificationPage } from './notification/NotificationPage';
 
 export const MainApp: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -25,6 +26,8 @@ export const MainApp: React.FC = () => {
         return <Dashboard />;
       case 'matching':
         return <MatchingPage />;
+      case 'notifications':
+        return <NotificationPage />;
       case 'subjects':
         return <SubjectsPage />;
       case 'messages':

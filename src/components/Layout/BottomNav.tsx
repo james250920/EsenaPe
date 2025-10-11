@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Users, BookOpen, MessageCircle, User } from 'lucide-react';
+import { Home, Users, MessageCircle, User, Heart } from 'lucide-react';
 
 interface BottomNavProps {
   activeTab: string;
@@ -10,7 +10,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, onTabChange }) 
   const navigation = [
     { id: 'dashboard', name: 'Inicio', icon: Home },
     { id: 'matching', name: 'Matching', icon: Users },
-    { id: 'subjects', name: 'Materias', icon: BookOpen },
+    { id: 'notifications', name: 'Interés', icon: Heart },
     { id: 'messages', name: 'Mensajes', icon: MessageCircle },
     { id: 'profile', name: 'Perfil', icon: User },
   ];

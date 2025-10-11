@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Users, BookOpen, MessageCircle, Star, User, Settings, LogOut } from 'lucide-react';
+import { Home, Users, BookOpen, MessageCircle, Star, User, Settings, LogOut, MapPin, Heart } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
 interface SidebarProps {
@@ -14,11 +14,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen
   const navigation = [
     { id: 'dashboard', name: 'Dashboard', icon: Home },
     { id: 'matching', name: 'Matching', icon: Users },
+    { id: 'notifications', name: 'Me Interesan', icon: Heart },
     { id: 'subjects', name: 'Materias', icon: BookOpen },
     { id: 'messages', name: 'Mensajes', icon: MessageCircle },
     { id: 'reviews', name: 'Reseñas', icon: Star },
     { id: 'profile', name: 'Perfil', icon: User },
-    { id: 'tutors', name: 'Localizar Tutores', icon: Users },
+    { id: 'tutors', name: 'Localizar Tutores', icon: MapPin },
     { id: 'settings', name: 'Configuración', icon: Settings },
     
   ];

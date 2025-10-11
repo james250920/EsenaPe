@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Lock, GraduationCap, Eye, EyeOff } from 'lucide-react';
+import { Mail, Lock, GraduationCap, Eye, EyeOff, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { universities } from '../../data/universities';
 
@@ -73,6 +73,12 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) =
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="text-center mb-8">
+        <div className="absolute top-4 left-4">
+          <button onClick={() => window.location.href = "https://james250920.github.io/EnsenaPe/"}  className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+            <ArrowLeft className="h-5 w-5" />
+            <span className="font-medium">Volver</span>
+          </button>
+        </div>
         <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <span className="text-white font-bold text-2xl">EP</span>
         </div>

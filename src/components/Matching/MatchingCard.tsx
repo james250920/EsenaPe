@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, MapPin, CheckCircle, X, Heart } from 'lucide-react';
 import { User } from '../../types';
+import { interestedTutorsService } from '../../services/interestedTutors';
 
 interface MatchingCardProps {
   user: User;
@@ -10,6 +11,14 @@ interface MatchingCardProps {
 export const MatchingCard: React.FC<MatchingCardProps> = ({ user, onSwipe }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
+
+  const handleSwipeAction = (direction: 'left' | 'right') => {
+    // Si es swipe a la derecha (me interesa), guardar en localStorage
+    if (direction === 'right') {
+      interestedTutorsService.addInterestedTutor(user);
+    }
+    onSwipe(direction);
+  };
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDragging(true);
@@ -23,7 +32,7 @@ export const MatchingCard: React.FC<MatchingCardProps> = ({ user, onSwipe }) => 
     const handleMouseUp = () => {
       setIsDragging(false);
       if (Math.abs(dragOffset) > 100) {
-        onSwipe(dragOffset > 0 ? 'right' : 'left');
+        handleSwipeAction(dragOffset > 0 ? 'right' : 'left');
       }
       setDragOffset(0);
       document.removeEventListener('mousemove', handleMouseMove);
@@ -142,14 +151,14 @@ export const MatchingCard: React.FC<MatchingCardProps> = ({ user, onSwipe }) => 
       {/* Action buttons */}
       <div className="flex p-6 pt-0 space-x-4">
         <button
-          onClick={() => onSwipe('left')}
+          onClick={() => handleSwipeAction('left')}
           className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-xl font-medium transition-colors flex items-center justify-center space-x-2"
         >
           <X className="h-5 w-5" />
           <span>Pasar</span>
         </button>
         <button
-          onClick={() => onSwipe('right')}
+          onClick={() => handleSwipeAction('right')}
           className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 px-4 rounded-xl font-medium transition-all flex items-center justify-center space-x-2"
         >
           <Heart className="h-5 w-5" />
